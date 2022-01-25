@@ -6,15 +6,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-  return 'Hello, Docker!'
+    return 'Hello, Docker!'
 
 @app.route('/welcome')
 def welcome():
-  return 'Welcome, you did it!'
+    return 'Welcome, you did it!'
 
 @app.route('/congratulations')
 def congratulations():
     return 'Congratulations, now you managed to figure it out!'
+
+@app.route('/github')
+def github():
+    return 'Congratuulations! You successfully set up the gt hub action to deploy the docker image!'
+  
 
 @app.route('/widgets')
 def get_widgets():
